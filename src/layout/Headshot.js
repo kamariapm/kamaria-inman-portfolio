@@ -5,16 +5,10 @@ class Headshot extends Component {
   render() {
     return (
       <div className="Headshot">
-        <img src={headshot} alt=" " style={imageStyle} />
+        <img src={headshot} className="rounded-circle" alt=" " />
       </div>
     );
   }
 }
-
-const imageStyle = {
-  borderRadius: "50%",
-  marginRight: "55%",
-  marginTop: "-16%"
-};
 
 export default Headshot;
