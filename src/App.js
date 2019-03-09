@@ -1,26 +1,27 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import Navbar from "./layout/Navbar";
+import Footer from "./layout/Footer";
+import Header from "./layout/Header";
+import Bio from "./layout/Bio";
+import Headshit from "./layout/Headshot";
+
+import "./App.css";
+import Headshot from "./layout/Headshot";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Header />
+          <Bio />
+          <Headshot />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }
